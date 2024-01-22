@@ -1,7 +1,8 @@
 // Imports go first
-import { makePottery } from "./scripts/PotteryWheel.mjs"
-import { firePottery } from "./scripts/Kiln.mjs"
-import { toSellOrNotToSell, usePottery } from "./scripts/PotteryCatalog.mjs"
+import { makePottery } from "./scripts/PotteryWheel.js"
+import { firePottery } from "./scripts/Kiln.js"
+import { toSellOrNotToSell, usePottery } from "./scripts/PotteryCatalog.js"
+import { PotteryList } from "./PotteryList.js"
 
 // Make 5 pieces of pottery at the wheel
 let mug = makePottery ("Mug", 20, 16)
@@ -23,8 +24,11 @@ let pricedCylinder = toSellOrNotToSell(firedCylinder)
 let pricedBowl = toSellOrNotToSell(firedBowl)
 let pricedPlate = toSellOrNotToSell(firedPlate)
 let pricedVase = toSellOrNotToSell(firedVase)
-console.log(pricedMug, pricedCylinder, pricedBowl, pricedPlate, pricedVase)
-// Invoke the component function that renders the HTML list
 
+// class="potteryList"
+// Invoke the component function that renders the HTML list
+let potteryList = PotteryList()
+let parentElement = document.querySelector(".potteryList")
+parentElement.innerHTML = potteryList
 
 

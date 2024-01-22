@@ -15,5 +15,5 @@ export const toSellOrNotToSell = (potteryObject) => {
 }
 
 export const usePottery = () => {
-    return potteryToBeSold
+    return [...potteryToBeSold]
 }
