@@ -11,4 +11,8 @@ const makePottery = (designShape, potteryWeight, potteryHeight) => {
     return pottery
 }
 
-console.log( makePottery ("Cylinder", 3.5, 24) )
+makePottery ("Cylinder", 3.5, 24)
+makePottery ("Bowl", 2.0, 18)
+makePottery ("Plate", 1.8, 8)
+makePottery ("Mug", 2.5, 16)
+makePottery ("Vase", 4.2, 18)
